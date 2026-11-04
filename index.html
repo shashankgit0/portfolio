@@ -116,7 +116,7 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .hi{font-family:var(--mono);font-size:14px;color:var(--mute);display:flex;align-items:center;gap:10px}
 .hi .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 60%,transparent);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.hero h1{font-size:clamp(46px,6.2vw,84px);font-weight:900;letter-spacing:-.04em;line-height:1;filter:url(#liquid);margin-top:16px;
+.hero h1{font-size:clamp(46px,6.2vw,84px);font-weight:900;letter-spacing:-.04em;line-height:1.1;filter:url(#liquid);margin-top:16px;
   background:linear-gradient(100deg,#6d28d9 0%,#3b4fd8 18%,#1f7a63 34%,#7a8494 48%,#8b1e3f 62%,#b4537a 76%,#5b21b6 90%,#6d28d9 100%);background-size:300% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;animation:namegrad 18s ease-in-out infinite}
 .hero h1 .nl{display:block}
@@ -179,6 +179,7 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .dprof .me:hover{filter:grayscale(0)}
 .dprof b{display:block;font-size:16px;font-weight:800;color:#eceef2;letter-spacing:-.02em}
 .dprof span{display:block;font-size:13px;color:#9aa1ae;margin-top:2px}
+.dprof .yrs{font-family:var(--mono);font-size:12px;color:#cfd3db;margin-top:6px}.dprof .yrs b{display:inline;font-size:13px;color:#a78bfa;font-weight:800}
 .dprof .loc{font-family:var(--mono);font-size:11.5px;color:#6b7280}
 .dchart{margin:14px 18px 16px;padding:14px 14px 10px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:#0f1116}
 .dch-h{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:#7b828f;margin-bottom:8px}
@@ -435,19 +436,13 @@ footer a{color:var(--ink)}
         <div class="dbar"><span class="live"><i></i>live</span><span>profile.dashboard</span><span class="ref">refreshed just now</span></div>
         <div class="dprof">
           <img class="me" data-logo="me" alt="Photo of Shashank Reddy Yarva">
-          <div><b>Shashank Reddy Yarva</b><span>Sr Data Analyst · FloridaCommerce</span><span class="loc">Florida, USA · from India</span></div>
+          <div><b>Shashank Reddy Yarva</b><span>Sr Data Analyst · FloridaCommerce</span><span class="yrs"><b class="gx" data-count="5" data-suf="+">0</b> years with data</span><span class="loc">Florida, USA · from India</span></div>
         </div>
         <div class="dchart">
           <div class="dch-h"><span>career.trend()</span><span class="lgd"><i class="w"></i>work <i class="e"></i>education</span></div>
           <svg viewBox="0 0 400 130" id="trend" aria-label="Career trend from 2017 to now, covering education and work"></svg>
           <div class="dch-x"><span>'17</span><span>'19</span><span>'21</span><span>'23</span><span>'25</span><span>now</span></div>
           <div class="dch-t" id="trendTip"><b>'24</b> Sr Data Analyst · FloridaCommerce</div>
-        </div>
-        <div class="metrics">
-          <div class="metric" style="--c:#8b5cf6"><b class="gx" data-count="5" data-suf="+">0</b><span>years with data</span></div>
-          <div class="metric" style="--c:#3b82f6"><b class="gx" data-count="4">0</b><span>companies, 2 countries</span></div>
-          <div class="metric" style="--c:#14b8a6"><b class="gx" data-count="2">0</b><span>degrees (ECE + IT mgmt)</span></div>
-          <div class="metric" style="--c:#c0617f"><b class="gx" data-count="1">0</b><span>live app I run for fun</span></div>
         </div>
         <div class="dfoot">source: résumé, linkedin, mild self-belief</div>
       </div>
@@ -875,8 +870,8 @@ $$(".rv").forEach(el=>io.observe(el));
 (()=>{const h=document.querySelector(".hero h1");if(!h||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
  setInterval(()=>{h.classList.remove("jolt");void h.offsetWidth;h.classList.add("jolt")},5200)})();
 /* typed glitch */
-const roles=["data pipelines","public dashboards","federal reports","automations","AI-powered workflows","clean SQL","Tableau dashboards","ETL that doesn't break"];
-const dark=["#ff5a1f","#06b6d4","#84cc16","#ec4899","#8b5cf6","#eab308","#3b82f6","#22c55e"],light=["#ea580c","#0891b2","#4d7c0f","#db2777","#7c3aed","#b45309","#2563eb","#16a34a"];
+const roles=["data pipelines","dashboards","reports","clean SQL","ETL jobs","Tableau dashboards","Power BI reports","Alteryx workflows","Snowflake models","Python scripts","automations","AI-powered workflows","data models","KPI scorecards","wage-match analyses","data validation checks","stored procedures","Airflow DAGs","PySpark jobs","trend forecasts","Streamlit apps","fantasy cricket apps","PowerShell scripts","SFTP automations","star schemas","ad hoc analyses","self-serve reports","data quality checks","things that run while I sleep","ETL that doesn't break"];
+const dark=["#8b5cf6","#3b82f6","#14b8a6","#c0617f","#a78bfa","#06b6d4","#22c55e","#d97757"],light=["#ea580c","#0891b2","#4d7c0f","#db2777","#7c3aed","#b45309","#2563eb","#16a34a"];
 let ri=0;const tEl=$("#typed");
 const applyTc=()=>tEl.style.setProperty("--wc",(root.dataset.theme==="light"?light:dark)[ri]);applyTc();
 const swap=()=>{tEl.classList.remove("go");void tEl.offsetWidth;tEl.classList.add("go");
