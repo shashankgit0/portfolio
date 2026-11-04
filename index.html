@@ -267,7 +267,7 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .jobbody{padding:26px 28px 28px}
 .summary{font-size:16px;line-height:1.7;color:var(--mute);max-width:880px}
 .summary b{color:var(--ink);font-weight:600}
-.ribbon{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:8px 13px;border-radius:10px;font-size:13.5px;font-weight:700;background:color-mix(in srgb,var(--yellow) 12%,var(--card));border:1px solid color-mix(in srgb,var(--yellow) 40%,transparent)}
+.ribbon{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:8px 13px;border-radius:10px;font-size:13.5px;font-weight:700;background:color-mix(in srgb,var(--yellow) 12%,var(--card));border:1px solid color-mix(in srgb,var(--yellow) 40%,transparent)}
 .ribbon .medal{width:22px;height:22px;border-radius:50%;background:var(--yellow);color:#3a2500;display:grid;place-items:center;font-size:11px;font-weight:900}
 .jstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:20px}
 .jstat{padding:14px;border-radius:12px;background:var(--card2);border:1px solid var(--line)}
@@ -281,6 +281,9 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .grp li{position:relative;padding-left:18px;font-size:14px;line-height:1.6;color:var(--mute)}
 .grp li::before{content:"→";position:absolute;left:0;top:0;color:var(--gc,var(--c));font-family:var(--mono);font-size:12px}
 .grp li b{color:var(--ink);font-weight:600}
+.plain{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.plain li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:var(--mute)}
+.plain li::before{content:"→";position:absolute;left:0;color:var(--c);font-family:var(--mono);font-size:12px}
 .stackrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;align-items:center}
 .stackrow > span{font-family:var(--mono);font-size:11px;color:var(--soft);margin-right:6px}
 .stackrow .chip{font-family:var(--mono);font-size:12px;padding:5px 9px}
@@ -333,6 +336,8 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .hcard b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em}
 .hcard span.d{display:block;font-size:13.5px;color:var(--mute);margin-top:4px;line-height:1.5}
 
+.flag .saf{color:#ff9933}.flag .grn{color:#22a447}.flag .wht{color:#ffffff}.flag .red{color:#e0384b}.flag .blu{color:#4a6cf7}
+[data-theme="light"] .flag .wht{color:#111318;-webkit-text-stroke:0}
 /* resume */
 .cv{display:grid;grid-template-columns:300px 1fr;gap:28px;margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;align-items:center}
 .cvthumb{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line2);aspect-ratio:612/792;background:#fff}
@@ -450,8 +455,8 @@ footer a{color:var(--ink)}
         <div class="hi rv"><span class="pulse"></span>hi, i'm</div>
         <h1 class="rv nm" style="--d:.06s" aria-label="Shashank Reddy Yarva"><span class="nl"><span class="ini">S</span>hashank</span><span class="nl"><span class="ini">R</span>eddy</span><span class="nl"><span class="ini">Y</span>arva</span></h1>
         <div class="typed rv" style="--d:.14s">I build <b id="typed" class="glitch" data-text="data pipelines">data pipelines</b></div>
-        <p class="about rv" style="--d:.22s"><b>Data analyst.</b> I've spent 5+ years turning messy data into pipelines, dashboards and reports that people actually use. These days I do it for the <b>State of Florida</b>.</p>
-        <p class="about rv" style="--d:.28s">I grew up in India, did my Master's at UT Dallas and ended up in Florida. I'm big on clean SQL and automating anything I've done twice, and I let Claude Code handle the boring bits.</p>
+        <p class="about rv" style="--d:.22s"><b>Data analyst.</b> I've spent 5+ years turning messy data into pipelines, dashboards and reports that people actually use. These days I'm on the data team at <b>FloridaCommerce</b>.</p>
+        <p class="about rv" style="--d:.28s">I grew up in India, did my Master's at UT Dallas and now work in the US. I'm big on clean SQL and automating anything I've done twice, and I let Claude Code handle the boring bits.</p>
         <div class="ctas rv" style="--d:.36s">
           <a class="btn pri" href="#work" data-go>View experience <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn" href="https://www.linkedin.com/in/shashankyarva" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
@@ -462,7 +467,7 @@ footer a{color:var(--ink)}
         <div class="dbar"><span class="live"><i></i>live</span><span>profile.dashboard</span><span class="ref">refreshed just now</span></div>
         <div class="dprof">
           <img class="me" data-logo="me" alt="Photo of Shashank Reddy Yarva">
-          <div><b>Shashank Reddy Yarva</b><span>Sr Data Analyst · FloridaCommerce</span><span class="yrs"><b class="gx" data-count="5" data-suf="+">0</b> years with data</span><span class="loc">Florida, USA · from India</span></div>
+          <div><b>Shashank Reddy Yarva</b><span>Sr Data Analyst · FloridaCommerce</span><span class="yrs"><b class="gx" data-count="5" data-suf="+">0</b> years with data</span><span class="loc">USA · from India</span></div>
         </div>
         <div class="dchart">
           <div class="dch-h"><span>career.trend()</span><span class="lgd"><i class="w"></i>work <i class="e"></i>education</span></div>
@@ -482,10 +487,10 @@ footer a{color:var(--ink)}
   <div class="wrap about-grid">
     <div class="story">
       <div class="kicker rv"><b>01</b>// about</div>
-      <h2 class="title rv" style="--d:.06s">From <span style="color:var(--orange)">India</span> to <span style="color:var(--blue)">Florida</span>.</h2>
+      <h2 class="title rv" style="--d:.06s">From <span class="flag"><span class="saf">IN</span><span class="wht">D</span><span class="grn">IA</span></span> to <span class="flag"><span class="red">U</span><span class="wht">S</span><span class="blu">A</span></span>.</h2>
       <p class="rv" style="--d:.1s">I started out as an <b>Electronics and Communication engineer</b>. Somewhere between C programming and probability theory I realised I liked the data more than the circuits.</p>
       <p class="rv" style="--d:.15s">In 2021 I moved to the US for a <b>Master's in IT Management at UT Dallas</b>, where I studied databases, big data, Python and cloud. Then I spent a year as a <b>data engineer</b> piping Airflow and PySpark jobs into Snowflake.</p>
-      <p class="rv" style="--d:.2s">Now I'm a <b>Senior Data Analyst at FloridaCommerce</b>. I handle the state's federal workforce reporting, build its public dashboards, and automate anything I'm asked to do twice.</p>
+      <p class="rv" style="--d:.2s">Now I'm a <b>Senior Data Analyst at FloridaCommerce</b>. I work on workforce programme reporting, Tableau dashboards and Alteryx automation, and I try to automate anything I've had to do twice.</p>
       <div class="journey rv" style="--d:.25s">
         <div class="jrow"><span>year</span><span>event</span></div>
         <div class="jrow" style="--c:var(--orange)"><span>2017</span><span>Started B.Tech in ECE, India</span></div>
@@ -493,12 +498,12 @@ footer a{color:var(--ink)}
         <div class="jrow" style="--c:var(--pink)"><span>2021</span><span>Moved to the US for an M.S. at UT Dallas</span></div>
         <div class="jrow" style="--c:var(--violet)"><span>2023</span><span>Graduated and started as a Data Engineer</span></div>
         <div class="jrow" style="--c:var(--blue)"><span>2024</span><span>Joined FloridaCommerce as Sr Data Analyst</span></div>
-        <div class="jrow" style="--c:var(--lime)"><span>now</span><span>Shipping federal reports and automating the rest</span></div>
+        <div class="jrow" style="--c:var(--lime)"><span>now</span><span>Reports, dashboards and a lot of SQL</span></div>
       </div>
     </div>
     <div class="rv" style="--d:.12s">
       <div class="globebox" id="globebox">
-        <svg id="globe" viewBox="0 0 500 500" role="img" aria-label="Globe with India and the United States highlighted and a line from India to Florida">
+        <svg id="globe" viewBox="0 0 500 500" role="img" aria-label="Globe with India and the United States highlighted and a line from India to the USA">
           <defs><linearGradient id="arcg" x1="0" x2="1"><stop offset="0" stop-color="#ff6b2c"/><stop offset=".5" stop-color="#f472b6"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
           <circle class="sphere" cx="250" cy="250" r="230"/>
           <path class="grat" id="gGrat"/><g id="gLand"></g>
@@ -532,95 +537,25 @@ footer a{color:var(--ink)}
     <article class="job rv" id="floridacommerce" style="--c:var(--orange)">
       <div class="jobhead">
         <div class="jobid"><div class="logo-tile"><img data-logo="fc" alt="FloridaCommerce logo"></div><div><h3>FloridaCommerce</h3><div class="role">Senior Data Analyst · Federal Reporting and Data Services</div></div></div>
-        <div class="jobmeta"><span class="when">Oct 2024 — Present</span><span>Florida, USA · Full-time</span></div>
+        <div class="jobmeta"><span class="when">Oct 2024 — Present</span><span>USA · Full-time</span></div>
       </div>
       <div class="jobbody">
-        <p class="summary">I'm the analyst behind Florida's <b>federal workforce reporting</b> to the U.S. Department of Labor and the state's <b>public performance dashboards</b>. The work spans seven programmes: WIOA, Wagner-Peyser, TAA, RESEA, SNAP E&amp;T, Welfare Transition and ETPL. I own it end to end, from writing the SQL and validating the data to building the dashboards, automating the monthly reports and getting every submission in on time.</p>
+        <p class="summary">I work on the team behind the state's workforce programme reporting, covering programmes like <b>WIOA, Wagner-Peyser, TAA and RESEA</b>. Day to day that means writing SQL, building Tableau dashboards, designing Alteryx workflows and making recurring reports run with less manual effort.</p>
         <div class="ribbon"><span class="medal">★</span>Employee of the Month · June 2026</div>
-        <div class="jstats">
-          <div class="jstat"><b class="gx" data-count="4">0</b><span>public-facing Tableau dashboards</span></div>
-          <div class="jstat"><b class="gx" data-count="9">0</b><span>quarters of federal reports, on schedule</span></div>
-          <div class="jstat"><b class="gx" data-count="4" data-suf="+">0</b><span>recurring reports every month</span></div>
-          <div class="jstat"><b class="gx" data-count="7">0</b><span>federal programmes covered</span></div>
-          <div class="jstat"><b class="gx" data-count="23">0</b><span>annual FETPIP files produced</span></div>
-        </div>
-        <div class="groups">
-          <div class="grp" style="--gc:var(--orange)"><h4><i>01</i>Federal reporting and compliance</h4><ul>
-            <li>Own the <b>quarterly federal reporting cycle</b> to the U.S. Department of Labor, with <b>9 consecutive quarters</b> delivered on schedule.</li>
-            <li>Generate <b>PIRL files</b> with SQL Server import and master scripts for <b>WIOA Adult and TAA</b>, then validate them and upload them to DOL's <b>WIPS</b> system.</li>
-            <li>Lead the migration of the PIRL scripts from the <b>PIRL 2021 schema to PIRL 2025</b> for PY2026 Q1.</li>
-            <li>Prepare and validate <b>ETA reports</b>, including the <b>ETA-9171 ETPL</b> submission and the ETA-9172 and 9173 quarterly reports.</li>
-            <li>Run DOL's <b>TAADI self-check</b> every quarter on current and prior-quarter TAA data, and resolve the exceptions before submission.</li>
-            <li>Produce <b>23 annual FETPIP files</b> of exiters and participants across WIOA, TAA, Wagner-Peyser/JVSG, SNAP E&amp;T and Welfare Transition.</li>
-            <li>Apply <b>TEGL guidance</b> and the WIPS edit and lock rules so corrections land before the 90-day lock.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--cyan)"><h4><i>02</i>Dashboards and public reporting</h4><ul>
-            <li>Delivered <b>4 public-facing Tableau dashboards</b> for state leadership, regional workforce boards and the public.</li>
-            <li>Built the <b>Statewide Indicators of Performance</b> dashboard on a tall-format SQL view. It replaced a <b>22-tab manual Excel workbook</b> and adds an Exceeded / Met / Not Met scorecard.</li>
-            <li>Built the <b>ETPL continued-eligibility dashboard</b> so One-Stop staff can track each training provider's employment, wage and completion outcomes.</li>
-            <li>Designed an interactive <b>unemployment-claims dashboard</b> that helps stakeholders spot trends and issues early.</li>
-            <li>Reconcile dashboard data against <b>DOLETA source tables and stored procedures</b> so prior-year numbers match what was reported federally.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--lime)"><h4><i>03</i>Automation and pipelines</h4><ul>
-            <li>Deliver <b>4+ recurring reports every month</b>, including Employer Retention and Penetration, Placements and Level 1 Services.</li>
-            <li>Designed <b>Alteryx workflows</b> that automate ingestion, transformation, validation and output for those reports.</li>
-            <li>Fixed broken charts in R-generated reports with an <b>Excel Table auto-expand pattern</b>, so the visuals grow with new data and need no manual fixes.</li>
-            <li>Wrote <b>PowerShell automation</b> that renames and files every quarterly LAR and annual APR PDF across Wagner-Peyser, Adult, Dislocated Worker and Youth.</li>
-            <li>Automate <b>weekly SFTP extract downloads</b> with WinSCP and Windows Task Scheduler.</li>
-            <li>Diagnosed <b>scheduler failures</b> caused by upstream SFTP and linked-server outages, and got the workflows running reliably again.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--pink)"><h4><i>04</i>Analytics and data matching</h4><ul>
-            <li>Built <b>wage-match analyses</b> that link unemployment-insurance wage records to RESEA completers and programme participants, measuring employment and earnings after services.</li>
-            <li>Building a <b>multi-year wage aggregation (2021–2026)</b> that joins wage records with participant demographics and WIOA / Wagner-Peyser participation for an inter-agency data share.</li>
-            <li>Run <b>regression and trend analysis</b> in SQL and Python to forecast claim surges, flag anomalies and support policy-impact assessments.</li>
-            <li>Handle <b>RESEA case corrections and exits</b>, monitoring samples, apprenticeship service-code validation and Wagner-Peyser case investigations.</li>
-            <li>Turn around <b>ad hoc requests</b> and quick validations for programme directors, and present the findings as Tableau storyboards.</li>
-          </ul></div>
-        </div>
-        <div class="stackrow"><span>stack:</span>
-          <span class="chip"><i></i>SQL Server / SSMS</span><span class="chip"><i></i>Snowflake</span><span class="chip"><i></i>Alteryx</span><span class="chip"><i></i>Tableau</span><span class="chip"><i></i>Python</span><span class="chip"><i></i>R</span><span class="chip"><i></i>PowerShell</span><span class="chip"><i></i>WinSCP / SFTP</span><span class="chip"><i></i>Excel</span>
-        </div>
+        <div class="groups"><div class="grp" style="--gc:var(--orange)"><h4><i>01</i>Data analysis</h4><ul><li>Write <b>SQL</b> to pull, clean and join large programme and wage datasets in SQL Server and Snowflake.</li><li>Run <b>wage-match analyses</b> to understand employment and earnings outcomes after programme services.</li><li>Do <b>trend and regression analysis</b> in SQL and Python to spot patterns and anomalies.</li><li>Answer <b>ad hoc data requests</b> from programme teams, and turn the results into clear summaries.</li></ul></div><div class="grp" style="--gc:var(--cyan)"><h4><i>02</i>Tableau development</h4><ul><li>Build and maintain <b>Tableau dashboards</b>, including public-facing performance dashboards.</li><li>Design <b>scorecards and KPI views</b> that show performance against programme targets at a glance.</li><li>Model the underlying <b>SQL views</b> so dashboards stay fast and easy to update.</li><li>Iterate on dashboards with stakeholder feedback so they stay useful.</li></ul></div><div class="grp" style="--gc:var(--lime)"><h4><i>03</i>Workflow design and automation</h4><ul><li>Design <b>Alteryx workflows</b> that automate ingestion, transformation and output for <b>monthly reports</b>.</li><li>Write <b>PowerShell scripts</b> to handle repetitive file work like renaming and organising report outputs.</li><li>Set up <b>scheduled SFTP extracts</b> with WinSCP and Task Scheduler.</li><li>Troubleshoot <b>scheduled jobs</b> when upstream sources or connections fail.</li></ul></div><div class="grp" style="--gc:var(--pink)"><h4><i>04</i>Reporting and data quality</h4><ul><li>Prepare and validate data for <b>quarterly federal reporting</b> to the U.S. Department of Labor.</li><li>Build <b>validation checks</b> so reports match source systems before they go out.</li><li>Support <b>annual data files</b> and data-sharing requests across workforce programmes.</li><li>Keep the process documented so it's <b>repeatable</b> from one quarter to the next.</li></ul></div></div>
+        <div class="stackrow"><span>stack:</span><span class="chip"><i></i>SQL Server</span><span class="chip"><i></i>Snowflake</span><span class="chip"><i></i>Alteryx</span><span class="chip"><i></i>Tableau</span><span class="chip"><i></i>Python</span><span class="chip"><i></i>R</span><span class="chip"><i></i>PowerShell</span><span class="chip"><i></i>WinSCP / SFTP</span><span class="chip"><i></i>Excel</span></div>
       </div>
     </article>
 
     <article class="job rv" id="datics" style="--c:var(--blue)">
       <div class="jobhead">
-        <div class="jobid"><div class="logo-tile"><img data-logo="datics" alt="Datics logo"></div><div><h3>Datics Inc</h3><div class="role">Data Engineer</div></div></div>
+        <div class="jobid"><div class="logo-tile"><img data-logo="datics" alt="Datics Inc logo"></div><div><h3>Datics Inc</h3><div class="role">Data Engineer</div></div></div>
         <div class="jobmeta"><span class="when">Aug 2023 — Oct 2024</span><span>USA · Full-time</span></div>
       </div>
       <div class="jobbody">
-        <p class="summary">I built and ran the pipelines behind <b>executive dashboards, KPI tracking and predictive analytics</b>. That meant moving data from operational databases and third-party APIs into a <b>Snowflake</b> warehouse, and making sure it arrived clean, on time and secure.</p>
-        <div class="jstats">
-          <div class="jstat"><b class="gx">ETL + ELT</b><span>pipeline patterns built and maintained</span></div>
-          <div class="jstat"><b class="gx" data-count="3" data-suf="+">0</b><span>source system types into Snowflake</span></div>
-          <div class="jstat"><b class="gx">dev → prod</b><span>multi-environment deployments</span></div>
-        </div>
-        <div class="groups">
-          <div class="grp" style="--gc:var(--blue)"><h4><i>01</i>Pipelines and orchestration</h4><ul>
-            <li>Designed and orchestrated <b>ETL and ELT pipelines</b> in Python (<b>Airflow, PySpark</b>), SQL and <b>Azure Data Factory</b>.</li>
-            <li>Migrated and transformed multi-source data from <b>SQL Server, PostgreSQL and external REST APIs</b> into <b>Snowflake</b>.</li>
-            <li>Scheduled dependency-driven workloads as <b>Airflow DAGs</b>, with retries and failure alerts.</li>
-            <li>Built <b>modular Python ingestion components</b> and parameterised SQL so new sources could be onboarded quickly.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--violet)"><h4><i>02</i>Data quality and governance</h4><ul>
-            <li>Built <b>automated validation</b> into every load, including row counts, schema checks, and null and duplicate checks.</li>
-            <li>Applied <b>data governance, security and compliance</b> best practices to how data was handled, stored and accessed.</li>
-            <li>Monitored pipeline performance, <b>resolved bottlenecks</b> and tuned processing logic across environments.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--cyan)"><h4><i>03</i>Analytics enablement</h4><ul>
-            <li>Integrated curated datasets into <b>Power BI</b> for real-time executive dashboards and KPI tracking.</li>
-            <li>Partnered with <b>analytics and product teams</b> to deliver data for predictive analytics use cases.</li>
-            <li>Modelled warehouse tables around the questions the business asks, so <b>dashboards stayed fast and simple</b>.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--pink)"><h4><i>04</i>Ways of working</h4><ul>
-            <li>Documented <b>data flows and transformation logic</b> so the team could support and extend the pipelines.</li>
-            <li>Worked in <b>Agile</b> sprints with analysts, product owners and engineers.</li>
-            <li>Supported <b>continuous improvement</b> of the data platform as new sources and use cases came in.</li>
-          </ul></div>
-        </div>
-        <div class="stackrow"><span>stack:</span>
-          <span class="chip"><i></i>Python</span><span class="chip"><i></i>Airflow</span><span class="chip"><i></i>PySpark</span><span class="chip"><i></i>Azure Data Factory</span><span class="chip"><i></i>Snowflake</span><span class="chip"><i></i>SQL Server</span><span class="chip"><i></i>PostgreSQL</span><span class="chip"><i></i>REST APIs</span><span class="chip"><i></i>Power BI</span>
-        </div>
+        <p class="summary">Built and maintained pipelines that brought data from operational databases and APIs into a <b>Snowflake</b> warehouse for dashboards, KPI tracking and analytics.</p>
+        <div class="groups"><div class="grp" style="--gc:var(--blue)"><h4><i>01</i>Pipelines</h4><ul><li>Built <b>ETL and ELT pipelines</b> with Python (<b>Airflow, PySpark</b>), SQL and <b>Azure Data Factory</b>.</li><li>Moved data from <b>SQL Server, PostgreSQL and REST APIs</b> into Snowflake.</li><li>Wrote modular Python and parameterised SQL to make new sources easier to onboard.</li></ul></div><div class="grp" style="--gc:var(--violet)"><h4><i>02</i>Quality and analytics</h4><ul><li>Added <b>validation checks</b> (row counts, schema, nulls, duplicates) to loads.</li><li>Followed data governance and access practices, and helped tune slow processing steps.</li><li>Prepared curated datasets for <b>Power BI</b> dashboards and KPI tracking.</li></ul></div></div>
+        <div class="stackrow"><span>stack:</span><span class="chip"><i></i>Python</span><span class="chip"><i></i>Airflow</span><span class="chip"><i></i>PySpark</span><span class="chip"><i></i>Azure Data Factory</span><span class="chip"><i></i>Snowflake</span><span class="chip"><i></i>SQL Server</span><span class="chip"><i></i>PostgreSQL</span><span class="chip"><i></i>Power BI</span></div>
       </div>
     </article>
 
@@ -630,26 +565,9 @@ footer a{color:var(--ink)}
         <div class="jobmeta"><span class="when">Jan 2023 — May 2023</span><span>USA · Internship</span></div>
       </div>
       <div class="jobbody">
-        <p class="summary">My first production data engineering role, done alongside my final semester at UT Dallas as part of the Information Systems Internship. I worked on <b>ETL, dashboards and my first cloud pipelines</b>, and earned the <b>AWS Certified Cloud Practitioner</b> credential.</p>
-        <div class="groups">
-          <div class="grp" style="--gc:var(--cyan)"><h4><i>01</i>ETL and analysis</h4><ul>
-            <li>Integrated data through <b>ETL processes using SQL and Hadoop</b> tools to analyse large datasets and support decisions across the organisation.</li>
-            <li>Developed and debugged <b>SQL scripts</b> with senior data engineers.</li>
-            <li>Added <b>data validation checks</b> and documented transformation logic for the team.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--blue)"><h4><i>02</i>Dashboards and reporting</h4><ul>
-            <li>Built dynamic <b>Tableau and Excel dashboards</b> for academic, administrative and risk-management performance.</li>
-            <li>Turned raw operational data into <b>actionable reports</b> for non-technical stakeholders.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--orange)"><h4><i>03</i>Cloud</h4><ul>
-            <li>Earned <b>AWS Certified Cloud Practitioner</b> during the internship.</li>
-            <li>Built proof-of-concept pipelines on <b>AWS S3, Glue and Redshift</b> in a sandbox environment.</li>
-            <li>Learned to design <b>cost-efficient, scalable</b> cloud data solutions.</li>
-          </ul></div>
-        </div>
-        <div class="stackrow"><span>stack:</span>
-          <span class="chip"><i></i>SQL</span><span class="chip"><i></i>Hadoop</span><span class="chip"><i></i>AWS S3</span><span class="chip"><i></i>AWS Glue</span><span class="chip"><i></i>Redshift</span><span class="chip"><i></i>Tableau</span><span class="chip"><i></i>Excel</span>
-        </div>
+        <p class="summary">My first data engineering role, alongside my last semester at UT Dallas. I worked on ETL, reporting and my first cloud pipelines.</p>
+        <ul class="plain"><li>Worked on <b>ETL processes</b> using SQL and Hadoop to prepare large datasets for analysis.</li><li>Built <b>Tableau and Excel dashboards</b> for academic, administrative and risk-management reporting.</li><li>Helped senior engineers debug <b>SQL scripts</b>, add validation checks and document transformation logic.</li><li>Built small proof-of-concept pipelines on <b>AWS S3, Glue and Redshift</b>.</li><li>Earned the <b>AWS Certified Cloud Practitioner</b> certification during the internship.</li></ul>
+        <div class="stackrow"><span>stack:</span><span class="chip"><i></i>SQL</span><span class="chip"><i></i>Hadoop</span><span class="chip"><i></i>AWS S3</span><span class="chip"><i></i>AWS Glue</span><span class="chip"><i></i>Redshift</span><span class="chip"><i></i>Tableau</span><span class="chip"><i></i>Excel</span></div>
       </div>
     </article>
 
@@ -659,24 +577,9 @@ footer a{color:var(--ink)}
         <div class="jobmeta"><span class="when">Sep 2019 — Jul 2021</span><span>India</span></div>
       </div>
       <div class="jobbody">
-        <p class="summary">This is where it started. I joined during my B.Tech to work on <b>student enrolment, performance and marketing data</b> for an arts education business, and found out that a good analysis can actually move revenue.</p>
-        <div class="groups">
-          <div class="grp" style="--gc:var(--pink)"><h4><i>01</i>Analysis and insight</h4><ul>
-            <li>Collected, cleaned and analysed <b>student enrolment and performance data</b> in Excel, Google Sheets and SQL.</li>
-            <li>Found <b>patterns in marketing performance</b> that improved decisions and <b>boosted overall programme revenue</b>.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--yellow)"><h4><i>02</i>Reporting automation</h4><ul>
-            <li>Automated recurring reports with <b>Power Query and pivot tables</b>.</li>
-            <li>Connected <b>Excel VBA macros, Google Apps Script and SharePoint</b> for automated, real-time data sharing across teams.</li>
-          </ul></div>
-          <div class="grp" style="--gc:var(--violet)"><h4><i>03</i>Visualisation and communication</h4><ul>
-            <li>Visualised insights in <b>Google Data Studio and Tableau Public</b>.</li>
-            <li>Produced <b>executive summaries and Power BI dashboards</b>, keeping reporting consistent and accessible across departments.</li>
-          </ul></div>
-        </div>
-        <div class="stackrow"><span>stack:</span>
-          <span class="chip"><i></i>Excel</span><span class="chip"><i></i>Google Sheets</span><span class="chip"><i></i>SQL</span><span class="chip"><i></i>Power Query</span><span class="chip"><i></i>VBA</span><span class="chip"><i></i>Apps Script</span><span class="chip"><i></i>Tableau Public</span><span class="chip"><i></i>Power BI</span>
-        </div>
+        <p class="summary">Where it started. I picked this up during my B.Tech, working with <b>enrolment, performance and marketing data</b> for an arts education business.</p>
+        <ul class="plain"><li>Cleaned and analysed <b>enrolment and performance data</b> in Excel, Google Sheets and SQL.</li><li>Found <b>patterns in marketing performance</b> that helped the team make better decisions and grow programme revenue.</li><li>Automated recurring reports with <b>Power Query, pivot tables, VBA and Apps Script</b>.</li><li>Built dashboards in <b>Tableau Public, Data Studio and Power BI</b>, plus executive summaries for the team.</li></ul>
+        <div class="stackrow"><span>stack:</span><span class="chip"><i></i>Excel</span><span class="chip"><i></i>Google Sheets</span><span class="chip"><i></i>SQL</span><span class="chip"><i></i>Power Query</span><span class="chip"><i></i>VBA</span><span class="chip"><i></i>Apps Script</span><span class="chip"><i></i>Tableau Public</span><span class="chip"><i></i>Power BI</span></div>
       </div>
     </article>
   </div>
@@ -826,7 +729,7 @@ const skills=[
  {id:"sk-bi",c:C.p,t:"BI and visualisation",s:"Making numbers readable",ic:ic.chart,items:["Tableau Desktop / Server / Prep","Power BI (DAX)","Qlik","Domo","Looker Studio","Excel (Power Query, VBA, pivots)"]},
  {id:"sk-dev",c:C.g,t:"Dev and tooling",s:"Shipping and collaborating",ic:ic.dev,items:["Git / GitHub","GitHub Actions","Docker","Streamlit","React","Vercel","Jupyter","VS Code","WinSCP / SFTP","Task Scheduler","Jira","Agile / Scrum"]},
  {id:"sk-analytics",c:C.l,t:"Analytics methods",s:"How I answer questions",ic:ic.stats,items:["Regression and forecasting","Trend and anomaly detection","Statistical analysis","Wage matching / record linkage","Data quality and QA","KPI design","Storytelling with data"]},
- {id:"sk-domain",c:C.o,t:"Domain expertise",s:"Federal workforce reporting, fluently",ic:ic.gov,cls:"wide",items:["WIOA","Wagner-Peyser","TAA","RESEA","SNAP E&T","Welfare Transition","ETPL","PIRL / WIPS","ETA-9171 / 9172 / 9173","TEGL guidance","FETPIP","DOL performance indicators"]},
+ {id:"sk-domain",c:C.o,t:"Domain",s:"Where most of my SQL ends up",ic:ic.gov,cls:"wide",items:["WIOA","Wagner-Peyser","TAA","RESEA","SNAP E&T","Welfare Transition","ETPL","PIRL / WIPS","ETA reporting","DOL performance indicators"]},
 ];
 const work=[
  {id:"floridacommerce",n:"FloridaCommerce",s:"Sr Data Analyst · 2024 — now",lg:"fc",c:C.o},
@@ -850,7 +753,7 @@ const hobbies=[
  {c:C.b,em:"✈️",t:"Travel",tag:"planned in excel",s:"Every trip gets a spreadsheet: tabs for flights, budget and backup plans, with conditional formatting. The trip itself is just the deployment.",w:1},
 ];
 const nav=[
- {t:"Intro",h:"#intro",sub:[{h:"#intro",b:"Hello",s:"Who I am in 30 seconds",c:C.o,tx:"00"},{h:"#about",b:"About me",s:"From India to Florida",c:C.c,tx:"01"}]},
+ {t:"Intro",h:"#intro",sub:[{h:"#intro",b:"Hello",s:"Who I am in 30 seconds",c:C.o,tx:"00"},{h:"#about",b:"About me",s:"From India to the USA",c:C.c,tx:"01"}]},
  {t:"Skills",h:"#skills",sub:skills.map((k,i)=>({h:"#"+k.id,b:k.t,s:k.s,c:k.c,tx:String(i+1).padStart(2,"0")}))},
  {t:"Work",h:"#work",sub:work.map(w=>({h:"#"+w.id,b:w.n,s:w.s,lg:w.lg}))},
  {t:"Education",h:"#education",sub:[{h:"#utd",b:"M.S. ITM",s:"UT Dallas · 2023",lg:"utd"},{h:"#bvrit",b:"B.Tech ECE",s:"BVRIT · 2021",lg:"bvrit"},{h:"#school",b:"High school",s:"St. Andrews · CBSE",lg:"school"}]},
@@ -922,7 +825,7 @@ if(!matchMedia("(prefers-reduced-motion: reduce)").matches)setInterval(swap,1500
 (()=>{const svg=document.getElementById("trend");if(!svg)return;const NS="http://www.w3.org/2000/svg";
 const P=[[2017.6,30,"e","'17","Started B.Tech in ECE, India"],[2019.7,52,"w","'19","Business Data Analyst · Temple of Arts"],[2021.4,38,"e","'21","B.Tech done, moved to the US for the M.S."],
  [2022.5,58,"e","'22","Deep in databases, big data and cloud at UT Dallas"],[2023.1,48,"w","'23","Data Engineer Intern · Hollerith"],[2023.4,66,"e","'23","Graduated · M.S. ITM, UT Dallas"],
- [2023.8,62,"w","'23","Data Engineer · Datics Inc"],[2024.8,80,"w","'24","Sr Data Analyst · FloridaCommerce"],[2025.6,74,"w","'25","Federal reporting, dashboards and automation"],[2026.8,92,"w","now","Still shipping. Trend: up and to the right"]];
+ [2023.8,62,"w","'23","Data Engineer · Datics Inc"],[2024.8,80,"w","'24","Sr Data Analyst · FloridaCommerce"],[2025.6,74,"w","'25","Reports, dashboards and automation"],[2026.8,92,"w","now","Still shipping. Trend: up and to the right"]];
 const X=y=>8+(y-2017.5)/(2026.9-2017.5)*384,Y=v=>122-v*1.12;
 const pts=P.map(p=>[X(p[0]),Y(p[1])]);
 let d=`M${pts[0][0]},${pts[0][1]}`;for(let i=0;i<pts.length-1;i++){const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
@@ -960,7 +863,7 @@ fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(r=>
 const NS="http://www.w3.org/2000/svg",mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
 const gGrat=$("#gGrat"),gIndia=$("#gIndia"),gUsa=$("#gUsa"),gArc=$("#gArc"),gArcBg=$("#gArcBg"),gMarks=$("#gMarks");
 const landPath=mk("path",{class:"land"});$("#gLand").appendChild(landPath);
-const cities=[{p:HYD,c:"#ff6b2c",l:"India"},{p:FLL,c:"#60a5fa",l:"Florida"}].map(o=>{const g=mk("g",{}),halo=mk("circle",{class:"halo",r:10,stroke:o.c}),dot=mk("circle",{class:"city",r:6,fill:o.c}),txt=mk("text",{class:"lbl",fill:o.c});txt.textContent=o.l;g.append(halo,dot,txt);gMarks.appendChild(g);return{...o,g,halo,dot,txt}});
+const cities=[{p:HYD,c:"#ff6b2c",l:"India"},{p:FLL,c:"#60a5fa",l:"USA"}].map(o=>{const g=mk("g",{}),halo=mk("circle",{class:"halo",r:10,stroke:o.c}),dot=mk("circle",{class:"city",r:6,fill:o.c}),txt=mk("text",{class:"lbl",fill:o.c});txt.textContent=o.l;g.append(halo,dot,txt);gMarks.appendChild(g);return{...o,g,halo,dot,txt}});
 const plane=mk("circle",{r:5,fill:"#fff",stroke:"#f472b6","stroke-width":3});gMarks.appendChild(plane);
 let rot=[-mid[0],-mid[1]*.75,0],drag=null,wob=0,arcT=0,visible=false,last=performance.now();
 const fullArc={type:"LineString",coordinates:d3.range(0,1.0001,.02).map(interp)};
