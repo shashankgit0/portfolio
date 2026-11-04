@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0b;--ink:#ecebe6;--mute:#8a8984;--dim:#4a4a47;--acc:#ff5b2e;--line:rgba(236,235,230,.12);
+:root{--bg:#0a0a0b;--ink:#ecebe6;--mute:#8a8984;--dim:#4a4a47;--acc:#a78bfa;--line:rgba(236,235,230,.12);
   --serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
   --ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -27,12 +27,12 @@ canvas#field{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:b
 
 /* chrome */
 .chrome{position:fixed;z-index:20;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mute)}
-#logo{top:24px;left:28px;color:var(--ink);font-family:var(--serif);font-size:26px;letter-spacing:0}
+#logo{top:22px;left:28px;color:var(--ink);font-family:var(--serif);font-size:26px;letter-spacing:0}
 #logo i{color:var(--acc);font-style:normal}
 #meta{top:30px;right:28px;display:flex;gap:22px;align-items:center}
 #meta .avail{display:flex;align-items:center;gap:8px;color:var(--ink)}
 #meta .avail::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,91,46,.6)}70%{box-shadow:0 0 0 10px rgba(255,91,46,0)}100%{box-shadow:0 0 0 0 rgba(255,91,46,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(167,139,250,.6)}70%{box-shadow:0 0 0 10px rgba(167,139,250,0)}100%{box-shadow:0 0 0 0 rgba(167,139,250,0)}}
 #idx{right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:flex-end;gap:14px}
 #idx .n{font-family:var(--serif);font-size:44px;color:var(--ink);line-height:1;height:44px;overflow:hidden;display:block}
 #idx .n span{display:block;transition:transform .7s var(--ease)}
@@ -107,7 +107,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 .tl::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
 .tl li{display:grid;grid-template-columns:100px 1fr;gap:14px;padding:0 0 18px 26px;position:relative}
 .tl li::before{content:"";position:absolute;left:0;top:6px;width:11px;height:11px;border-radius:50%;border:1px solid var(--mute);background:var(--bg)}
-.tl li:first-child::before{background:var(--acc);border-color:var(--acc);box-shadow:0 0 0 5px rgba(255,91,46,.15)}
+.tl li:first-child::before{background:var(--acc);border-color:var(--acc);box-shadow:0 0 0 5px rgba(167,139,250,.15)}
 .tl .yr{font-family:var(--mono);font-size:11px;color:var(--mute);padding-top:5px;letter-spacing:.04em}
 .tl b{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1;display:block}
 .tl i{font-style:normal;font-size:13px;color:var(--acc);display:block;margin-top:2px}
@@ -125,7 +125,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
 .pill{font-size:14px;padding:6px 13px;border:1px solid var(--line);border-radius:999px;transition:all .3s var(--ease);cursor:default}
 .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.pill.hot{border-color:rgba(255,91,46,.5);color:var(--acc)}
+.pill.hot{border-color:rgba(167,139,250,.5);color:var(--acc)}
 
 /* projects */
 .projects{margin-top:26px;border-top:1px solid var(--line)}
@@ -153,26 +153,18 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .btn{font-family:var(--mono);font-size:13px;letter-spacing:.04em;padding:15px 22px;border-radius:999px;border:1px solid var(--line);background:rgba(10,10,11,.6);transition:all .35s var(--ease);cursor:pointer;color:var(--ink);display:inline-flex;gap:10px;align-items:center}
 .btn:hover{border-color:var(--ink);transform:translateY(-2px)}
-.btn.pri{background:var(--acc);border-color:var(--acc);color:#120600}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#140a2e}
 .btn.pri:hover{background:var(--ink);border-color:var(--ink)}
 .small{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:22px;letter-spacing:.04em}
 .foot{position:absolute;bottom:26px;left:7vw;right:7vw;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.08em}
 
 
 /* nav */
-#nav{left:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:2px;padding:14px 16px;border-radius:16px;border:1px solid transparent;transition:background .35s,border-color .35s}
-#nav:hover,#nav:focus-within{background:rgba(10,10,11,.92);border-color:var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-#nav a{display:flex;align-items:center;gap:10px;padding:5px 0;color:var(--dim);font-size:11px;letter-spacing:.08em;transition:color .3s}
-#nav a .ln{width:12px;height:1px;background:currentColor;transition:width .45s var(--ease),background .3s;flex:none}
-#nav a .no{width:18px}
-#nav a .lb{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;transition:max-width .45s var(--ease),opacity .3s;text-transform:uppercase}
-#nav:hover a .lb,#nav:focus-within a .lb{max-width:160px;opacity:1}
+#nav{top:20px;right:24px;display:flex;gap:2px;padding:5px;border-radius:999px;background:rgba(10,10,11,.6);border:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+#nav a{padding:8px 14px;border-radius:999px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);transition:color .3s,background .4s var(--ease)}
 #nav a:hover,#nav a:focus-visible{color:var(--ink);outline:none}
-#nav a.on{color:var(--ink)}
-#nav a.on .ln{width:26px;background:var(--acc)}
-#nav a.on .no{color:var(--acc)}
-.pin{padding-left:max(7vw,120px)}
-.foot{left:max(7vw,120px)}
+#nav a.on{background:var(--ink);color:var(--bg)}
+@media (min-width:821px) and (max-width:1100px){#nav a{padding:7px 9px;font-size:10px;letter-spacing:.06em}}
 
 /* curtain */
 #curtain{position:fixed;inset:0;z-index:45;background:#111112;display:flex;align-items:center;justify-content:center;transform:translateY(100%);transition:transform .5s var(--ease);pointer-events:none}
@@ -192,6 +184,14 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 #menu a.on b{color:var(--acc)}
 #menu .mfoot{margin-top:26px;font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.06em}
 
+@media (min-width:821px){.pin{padding-top:86px;padding-bottom:24px}}
+@media (min-width:821px) and (max-height:860px){
+  h2{font-size:clamp(40px,4.4vw,64px)}h2.co{font-size:clamp(44px,5vw,72px)}
+  .groups{gap:10px;margin-top:20px}.pill{font-size:13px;padding:5px 11px}.pills{gap:6px}
+  .list li{padding:9px 0;font-size:14px}.lede{font-size:20px;margin-top:12px}
+  .stat .v,#floridacommerce .stat .v{font-size:38px}.stats{margin-top:16px}
+  .deg{padding:13px 16px}.deg b{font-size:22px}.degrees{margin-top:20px}
+}
 /* cursor */
 #cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid rgba(236,235,230,.5);border-radius:50%;z-index:60;pointer-events:none;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s;mix-blend-mode:difference}
 #cur.big{width:80px;height:80px;margin:-40px 0 0 -40px;background:#fff;border-color:#fff}
@@ -240,8 +240,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 <canvas id="field" aria-hidden="true"></canvas>
 <div id="cur" aria-hidden="true"></div>
 
-<a class="chrome" id="logo" href="#hero">SR<i>.</i></a>
-<div class="chrome" id="meta"><span class="city" id="clock">FORT LAUDERDALE —:—</span><span class="avail">Open to new roles</span></div>
+<a class="chrome" id="logo" href="#hero">SRY<i>.</i></a>
 <div class="chrome" id="idx" aria-hidden="true"><span class="n"><span id="idxN">00</span></span><span class="bar"><i id="idxBar"></i></span><span class="name" id="idxName">INTRO</span></div>
 <nav class="chrome" id="nav" aria-label="Sections"></nav>
 <button class="chrome" id="menuBtn" aria-expanded="false" aria-controls="menu"><span id="menuLbl">MENU</span><i></i></button>
@@ -250,14 +249,14 @@ h2.co{font-size:clamp(50px,6vw,92px)}
 <div class="chrome" id="hint">SCROLL ↓ — MOVE YOUR CURSOR THROUGH THE DATA</div>
 
 <main>
-  <section class="sec" id="hero" data-name="Intro">
+  <section class="sec" id="hero" data-g="0" data-name="Intro">
     <div class="pin"><div class="txt">
       <h1 class="hname"><span class="m"><span>Shashank</span></span><span class="m"><span>Reddy<em>.</em></span></span></h1>
       <div class="hside f d3"><span class="mono">SR DATA ANALYST — DATA ENGINEER</span>Six years of turning messy data into decisions, from Hyderabad to Dallas to the State of Florida. This is the <em style="color:var(--acc);font-style:normal">signal</em>. Scroll for the rest.</div>
     </div></div>
   </section>
 
-  <section class="sec" id="about" data-name="About">
+  <section class="sec" id="about" data-g="0" data-name="About">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>01</b>About</div>
       <h2><span class="m"><span>From Hyderabad</span></span><span class="m"><span>to <em>Fort Lauderdale</em></span></span></h2>
@@ -266,19 +265,22 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="education" data-name="Education">
+  <section class="sec" id="skills" data-g="1" data-name="Skills">
     <div class="pin"><div class="txt">
-      <div class="eyebrow f"><b>02</b>Education</div>
-      <h2><span class="m"><span>Engineer first,</span></span><span class="m"><span><em>data</em> by choice</span></span></h2>
-      <div class="degrees">
-        <div class="deg f d2"><span class="yr">MAY 2023</span><b>M.S., Information Technology Management</b><i>The University of Texas at Dallas, USA</i></div>
-        <div class="deg f d3"><span class="yr">MAY 2021</span><b>B.Tech, Electronics and Communication Engineering</b><i>B V Raju Institute of Technology, India</i></div>
-        <div class="deg cert f d4"><span class="yr">2023</span><b>AWS Certified Cloud Practitioner</b><i>Amazon Web Services</i></div>
+      <div class="eyebrow f"><b>02</b>Skills</div>
+      <h2><span class="m"><span>Everything in</span></span><span class="m"><span><em>orbit</em></span></span></h2>
+      <div class="groups">
+        <div class="grp f d2"><span>Languages</span><div class="pills"><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span><span class="pill">C</span></div></div>
+        <div class="grp f d2"><span>Databases</span><div class="pills"><span class="pill">SQL Server</span><span class="pill">Snowflake</span><span class="pill">PostgreSQL</span><span class="pill">Oracle 19c</span><span class="pill">Hadoop</span></div></div>
+        <div class="grp f d3"><span>Pipelines</span><div class="pills"><span class="pill">Airflow</span><span class="pill">PySpark</span><span class="pill">Azure Data Factory</span><span class="pill">Alteryx</span><span class="pill">ETL / ELT</span></div></div>
+        <div class="grp f d4"><span>Cloud</span><div class="pills"><span class="pill hot">AWS Certified</span><span class="pill">S3 · Glue · Redshift</span><span class="pill">Azure</span><span class="pill">GCP</span></div></div>
+        <div class="grp f d5"><span>BI</span><div class="pills"><span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Qlik</span><span class="pill">Domo</span><span class="pill">Excel</span></div></div>
+        <div class="grp f d6"><span>Build</span><div class="pills"><span class="pill">Streamlit</span><span class="pill">Supabase</span><span class="pill">PowerShell</span><span class="pill">Git</span><span class="pill">Agile</span></div></div>
       </div>
     </div></div>
   </section>
 
-  <section class="sec" id="floridacommerce" data-name="FloridaCommerce">
+  <section class="sec" id="floridacommerce" data-g="2" data-name="FloridaCommerce">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>03</b>Experience — 1 / 4</div>
       <h2 class="co" style="font-size:clamp(40px,4.9vw,78px)"><span class="m"><span>Florida<em>Commerce</em></span></span></h2>
@@ -298,7 +300,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="datics" data-name="Datics">
+  <section class="sec" id="datics" data-g="2" data-name="Datics">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>04</b>Experience — 2 / 4</div>
       <h2 class="co"><span class="m"><span>Datics <em>Inc</em></span></span></h2>
@@ -314,7 +316,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="hollerith" data-name="Hollerith">
+  <section class="sec" id="hollerith" data-g="2" data-name="Hollerith">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>05</b>Experience — 3 / 4</div>
       <h2 class="co"><span class="m"><span>Hollerith <em>IT</em></span></span></h2>
@@ -330,7 +332,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="temple" data-name="Temple of Arts">
+  <section class="sec" id="temple" data-g="2" data-name="Temple of Arts">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>06</b>Experience — 4 / 4</div>
       <h2 class="co"><span class="m"><span>Temple <em>of Arts</em></span></span></h2>
@@ -346,22 +348,19 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="skills" data-name="Skills">
+  <section class="sec" id="education" data-g="3" data-name="Education">
     <div class="pin"><div class="txt">
-      <div class="eyebrow f"><b>07</b>Skills</div>
-      <h2><span class="m"><span>Everything in</span></span><span class="m"><span><em>orbit</em></span></span></h2>
-      <div class="groups">
-        <div class="grp f d2"><span>Languages</span><div class="pills"><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span><span class="pill">C</span></div></div>
-        <div class="grp f d2"><span>Databases</span><div class="pills"><span class="pill">SQL Server</span><span class="pill">Snowflake</span><span class="pill">PostgreSQL</span><span class="pill">Oracle 19c</span><span class="pill">Hadoop</span></div></div>
-        <div class="grp f d3"><span>Pipelines</span><div class="pills"><span class="pill">Airflow</span><span class="pill">PySpark</span><span class="pill">Azure Data Factory</span><span class="pill">Alteryx</span><span class="pill">ETL / ELT</span></div></div>
-        <div class="grp f d4"><span>Cloud</span><div class="pills"><span class="pill hot">AWS Certified</span><span class="pill">S3 · Glue · Redshift</span><span class="pill">Azure</span><span class="pill">GCP</span></div></div>
-        <div class="grp f d5"><span>BI</span><div class="pills"><span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Qlik</span><span class="pill">Domo</span><span class="pill">Excel</span></div></div>
-        <div class="grp f d6"><span>Build</span><div class="pills"><span class="pill">Streamlit</span><span class="pill">Supabase</span><span class="pill">PowerShell</span><span class="pill">Git</span><span class="pill">Agile</span></div></div>
+      <div class="eyebrow f"><b>07</b>Education</div>
+      <h2><span class="m"><span>Engineer first,</span></span><span class="m"><span><em>data</em> by choice</span></span></h2>
+      <div class="degrees">
+        <div class="deg f d2"><span class="yr">MAY 2023</span><b>M.S., Information Technology Management</b><i>The University of Texas at Dallas, USA</i></div>
+        <div class="deg f d3"><span class="yr">MAY 2021</span><b>B.Tech, Electronics and Communication Engineering</b><i>B V Raju Institute of Technology, India</i></div>
+        <div class="deg cert f d4"><span class="yr">2023</span><b>AWS Certified Cloud Practitioner</b><i>Amazon Web Services</i></div>
       </div>
     </div></div>
   </section>
 
-  <section class="sec" id="built" data-name="Project">
+  <section class="sec" id="built" data-g="4" data-name="Project">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>08</b>Built after hours</div>
       <h2><span class="m"><span>A product I <em>run</em>,</span></span><span class="m"><span>not just built</span></span></h2>
@@ -380,7 +379,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="offhours" data-name="Off hours">
+  <section class="sec" id="offhours" data-g="5" data-name="Off hours">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>09</b>Off hours</div>
       <h2><span class="m"><span>The <em>unstructured</em></span></span><span class="m"><span>data</span></span></h2>
@@ -394,7 +393,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     </div></div>
   </section>
 
-  <section class="sec" id="contact" data-name="Contact" style="height:150vh">
+  <section class="sec" id="contact" data-g="6" data-name="Contact" style="height:150vh">
     <div class="pin"><div class="txt">
       <div class="eyebrow f"><b>10</b>Contact</div>
       <h2><span class="m"><span>Got a noisy</span></span><span class="m"><span>problem? <em>Say hello.</em></span></span></h2>
@@ -408,6 +407,7 @@ h2.co{font-size:clamp(50px,6vw,92px)}
     <div class="foot"><span>© 2026 SHASHANK REDDY</span><span>BUILT FROM SCRATCH. NO TEMPLATES.</span></div>
     </div>
   </section>
+
 </main>
 
 <script>
@@ -423,7 +423,7 @@ const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a
 const region=k=>{
   if(isMob())return k===0?{x:W*.08,y:H*.14,w:W*.84,h:H*.34}:{x:W*.1,y:H*.09,w:W*.8,h:H*.21};
   if(k===0)return {x:W*.06,y:H*.12,w:W*.88,h:H*.46};
-  const tr=Math.max(W*.07,120)+Math.min(560,W*.42)+50,x=Math.max(W*.52,tr),w=Math.max(220,W*.92-x);
+  const tr=W*.07+Math.min(560,W*.42)+50,x=Math.max(W*.52,tr),w=Math.max(220,W*.92-x);
   return {x,y:H*.16,w,h:H*.68};
 };
 
@@ -547,19 +547,20 @@ function build(){
   DPR=Math.min(isMob()?1.5:2,devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
   const nN=isMob()?1300:2600;
   if(nN!==N){N=nN;P=[];for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,acc:Math.random()<.07,s:rand(.8,1.9)});bases()}
-  forms=[
-    {pts:textPts(isMob()?"SR":"SHASHANK",region(0))},
-    {dyn:globe},
-    {pts:capPts(region(2))},
-    {pts:barPts(region(3))},
-    {dyn:flow},
-    {pts:cloudPts(region(5))},
-    {pts:linePts(region(6))},
-    {dyn:orbits},
-    {pts:windowPts(region(8))},
-    {dyn:drift},
-    {pts:textPts("HELLO",region(10))},
-  ];
+  const gen={
+    hero:k=>({pts:textPts(isMob()?"SRY":"SHASHANK",region(k))}),
+    about:()=>({dyn:globe}),
+    skills:()=>({dyn:orbits}),
+    floridacommerce:k=>({pts:barPts(region(k))}),
+    datics:()=>({dyn:flow}),
+    hollerith:k=>({pts:cloudPts(region(k))}),
+    temple:k=>({pts:linePts(region(k))}),
+    education:k=>({pts:capPts(region(k))}),
+    built:k=>({pts:windowPts(region(k))}),
+    offhours:()=>({dyn:drift}),
+    contact:k=>({pts:textPts("HELLO",region(k))}),
+  };
+  forms=secs.map((x,k)=>gen[x.id](k));
   measure();
 }
 
@@ -610,7 +611,7 @@ function frame(now){
     p.vx=(p.vx+ax)*.86;p.vy=(p.vy+ay)*.86;p.x+=p.vx;p.y+=p.vy;
     const isAcc=acc===null||acc===undefined?p.acc:acc||p.acc&&i%3===0;
     ctx.globalAlpha=Math.max(.12,Math.min(1,tz))*(isAcc?1:.82);
-    ctx.fillStyle=isAcc?"#ff5b2e":"#ecebe6";
+    ctx.fillStyle=isAcc?"#a78bfa":"#ecebe6";
     const s=p.s*(tz>.6?1:.75);ctx.fillRect(p.x,p.y,s,s);
   }
   ctx.globalAlpha=1;
@@ -622,12 +623,13 @@ function frame(now){
 const nav=document.getElementById("nav"),menuList=document.getElementById("menuList"),menu=document.getElementById("menu"),menuBtn=document.getElementById("menuBtn"),menuLbl=document.getElementById("menuLbl");
 const curtain=document.getElementById("curtain"),curtainTxt=document.getElementById("curtainTxt");
 const navA=[],menuA=[];
-secs.forEach((sec,i)=>{
-  const nm=sec.dataset.name,no=String(i).padStart(2,"0");
-  const a=document.createElement("a");a.href="#"+sec.id;a.innerHTML=`<span class="ln"></span><span class="no">${no}</span><span class="lb">${nm}</span>`;a.setAttribute("aria-label",nm);
-  a.addEventListener("click",e=>{e.preventDefault();a.blur();go(i)});nav.appendChild(a);navA.push(a);
-  const m=document.createElement("a");m.href="#"+sec.id;m.innerHTML=`<span>${no}</span><b>${nm}</b>`;m.style.transitionDelay=(.15+i*.035)+"s";
-  m.addEventListener("click",e=>{e.preventDefault();toggleMenu(false);go(i)});menuList.appendChild(m);menuA.push(m);
+const groups=[["Intro","hero"],["Skills","skills"],["Work","floridacommerce"],["Education","education"],["Projects","built"],["Off hours","offhours"],["Contact","contact"]];
+groups.forEach(([nm,id],g)=>{
+  const i=secs.findIndex(x=>x.id===id);
+  const a=document.createElement("a");a.href="#"+id;a.textContent=nm;
+  a.addEventListener("click",e=>{e.preventDefault();a.blur();go(i,nm)});nav.appendChild(a);navA.push(a);
+  const m=document.createElement("a");m.href="#"+id;m.innerHTML=`<span>${String(g+1).padStart(2,"0")}</span><b>${nm}</b>`;m.style.transitionDelay=(.15+g*.05)+"s";
+  m.addEventListener("click",e=>{e.preventDefault();toggleMenu(false);go(i,nm)});menuList.appendChild(m);menuA.push(m);
 });
 document.getElementById("logo").addEventListener("click",e=>{e.preventDefault();go(0)});
 const toggleMenu=open=>{menu.classList.toggle("open",open);menuBtn.classList.toggle("x",open);menuBtn.setAttribute("aria-expanded",open);menuLbl.textContent=open?"CLOSE":"MENU";document.body.style.overflow=open?"hidden":""};
@@ -635,16 +637,16 @@ menuBtn.addEventListener("click",()=>toggleMenu(!menu.classList.contains("open")
 addEventListener("keydown",e=>{if(e.key==="Escape")toggleMenu(false)});
 let busy=false;
 const yFor=i=>i===0?0:secs[i].offsetTop+4;
-function go(i){
+function go(i,label){
   if(busy)return;const y=yFor(i);
   if(Math.abs(scrollY-y)<innerHeight*.6){scrollTo({top:y,behavior:"smooth"});return}
   if(matchMedia("(prefers-reduced-motion: reduce)").matches){scrollTo(0,y);return}
-  busy=true;const nm=secs[i].dataset.name;curtainTxt.innerHTML=nm.replace(/(\S+)$/,"<em>$1</em>");
+  busy=true;const nm=label||secs[i].dataset.name;curtainTxt.innerHTML=nm.replace(/(\S+)$/,"<em>$1</em>");
   curtain.classList.add("in");
   setTimeout(()=>{scrollTo(0,y);curtain.classList.remove("in");curtain.classList.add("out");
     setTimeout(()=>{curtain.style.transition="none";curtain.classList.remove("out");void curtain.offsetWidth;curtain.style.transition="";busy=false},560)},520);
 }
-const setActive=a=>{navA.forEach((n,k)=>n.classList.toggle("on",k===a));menuA.forEach((n,k)=>n.classList.toggle("on",k===a))};
+const setActive=a=>{const g=+secs[a].dataset.g;navA.forEach((n,k)=>n.classList.toggle("on",k===g));menuA.forEach((n,k)=>n.classList.toggle("on",k===g))};
 
 /* chrome updates */
 const idxN=document.getElementById("idxN"),idxName=document.getElementById("idxName"),idxBar=document.getElementById("idxBar");
@@ -672,8 +674,6 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
 document.querySelectorAll("[data-todo]").forEach(a=>a.addEventListener("click",e=>e.preventDefault()));
 const copyBtn=document.getElementById("copy"),copyLbl=document.getElementById("copyLbl");
 copyBtn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText("shashank.work00@gmail.com");copyLbl.textContent="COPIED"}catch(e){copyLbl.textContent="SELECT IT"}setTimeout(()=>copyLbl.textContent="COPY",1800)});
-const clock=document.getElementById("clock");
-const tick=()=>{try{clock.textContent="FORT LAUDERDALE "+new Intl.DateTimeFormat("en-US",{hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"America/New_York"}).format(new Date())}catch(e){}};tick();setInterval(tick,20000);
 
 /* boot */
 build();
