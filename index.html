@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --orange:#ff6b2c;--cyan:#22d3ee;--lime:#a3e635;--pink:#f472b6;--violet:#a78bfa;--yellow:#facc15;--blue:#60a5fa;--green:#4ade80;
+  --orange:#ff5a1f;--cyan:#06b6d4;--lime:#84cc16;--pink:#ec4899;--violet:#8b5cf6;--yellow:#eab308;--blue:#3b82f6;--green:#22c55e;
   --bg:#0a0b0e;--bg2:#0e1014;--card:#111318;--card2:#161920;--ink:#eceef2;--mute:#9aa1ae;--soft:#6b7280;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
   --grid:rgba(255,255,255,.035);--ocean:#0e1726;--land:#232b39;--landline:#0a0b0e;--grat:rgba(255,255,255,.06);
   --sans:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1);
@@ -116,11 +116,12 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .hi{font-family:var(--mono);font-size:14px;color:var(--mute);display:flex;align-items:center;gap:10px}
 .hi .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 60%,transparent);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.hero h1{font-size:clamp(48px,7vw,92px);font-weight:900;letter-spacing:-.05em;line-height:.95;margin-top:18px;text-wrap:balance;
-  background:linear-gradient(100deg,#ff6b2c 0%,#f472b6 22%,#a78bfa 44%,#22d3ee 66%,#f472b6 84%,#ff6b2c 100%);background-size:300% 100%;
+.hero h1{font-size:clamp(46px,6.2vw,84px);font-weight:900;letter-spacing:-.05em;line-height:.9;margin-top:16px;
+  background:linear-gradient(100deg,#ff4d00 0%,#ff1f6b 25%,#7c3aed 50%,#0ea5e9 72%,#ff1f6b 88%,#ff4d00 100%);background-size:300% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;animation:namegrad 18s ease-in-out infinite}
-.hero h1 .ini{-webkit-text-fill-color:#fff3d6;color:#fff3d6;text-shadow:0 0 28px rgba(255,200,120,.35)}
-[data-theme="light"] .hero h1 .ini{-webkit-text-fill-color:#111318;color:#111318;text-shadow:none}
+.hero h1 .nl{display:block}
+.hero h1 .ini{font-size:1.2em;line-height:.85;margin-right:-.02em}
+.hero h1 .nl:nth-child(3) .ini{margin-right:-.1em}
 @keyframes namegrad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .typed{font-size:clamp(20px,2.4vw,28px);font-weight:700;margin-top:22px;min-height:1.4em;color:var(--ink);letter-spacing:-.02em}
 .glitch{position:relative;display:inline-block;color:var(--wc,var(--orange));transition:color .25s}
@@ -128,6 +129,12 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .glitch.go{animation:gjit .38s steps(4) both}
 .glitch.go::before{opacity:.9;color:#22d3ee;animation:gl1 .38s steps(3) both}
 .glitch.go::after{opacity:.9;color:#ff2bd6;animation:gl2 .38s steps(3) both}
+.gx{position:relative;display:inline-block}
+.gx::before,.gx::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;pointer-events:none;white-space:nowrap}
+.gx.go{animation:gjit .38s steps(4) both}
+.gx.go::before{opacity:.9;color:#00e5ff;-webkit-text-fill-color:#00e5ff;animation:gl1 .38s steps(3) both}
+.gx.go::after{opacity:.9;color:#ff1f8f;-webkit-text-fill-color:#ff1f8f;animation:gl2 .38s steps(3) both}
+.glitch.go::before{color:#00e5ff!important}.glitch.go::after{color:#ff1f8f!important}
 @keyframes gjit{0%{transform:none}25%{transform:translate(1px,-1px) skewX(-6deg)}50%{transform:translate(-2px,1px)}75%{transform:translate(1px,0) skewX(4deg)}100%{transform:none}}
 @keyframes gl1{0%{clip-path:inset(0 0 65% 0);transform:translate(-4px,0)}33%{clip-path:inset(45% 0 25% 0);transform:translate(3px,1px)}66%{clip-path:inset(15% 0 60% 0);transform:translate(-2px,-1px)}100%{clip-path:inset(80% 0 0 0);transform:translate(0,0);opacity:0}}
 @keyframes gl2{0%{clip-path:inset(60% 0 5% 0);transform:translate(4px,0)}33%{clip-path:inset(5% 0 70% 0);transform:translate(-3px,-1px)}66%{clip-path:inset(35% 0 40% 0);transform:translate(2px,1px)}100%{clip-path:inset(0 0 90% 0);transform:translate(0,0);opacity:0}}
@@ -174,16 +181,20 @@ h2.title em{font-style:normal;color:var(--c,var(--orange))}
 .dchart{margin:14px 18px 16px;padding:14px 14px 10px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:#0f1116}
 .dch-h{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:#7b828f;margin-bottom:8px}
 .dch-h span:first-child{color:#c084fc}
-#trend{width:100%;height:110px;overflow:visible}
-#trend .ln{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 1.6s var(--ease) .3s}
-#trend .ar{opacity:0;transition:opacity 1s .9s}
-#trend .pts circle{opacity:0;transition:opacity .4s}
-.dash.in #trend .ln{stroke-dashoffset:0}.dash.in #trend .ar{opacity:1}
-.dash.in #trend .pts circle{opacity:1}
-.dash.in #trend .pts circle:nth-child(1){transition-delay:.4s}.dash.in #trend .pts circle:nth-child(2){transition-delay:.9s}.dash.in #trend .pts circle:nth-child(3){transition-delay:1.1s}.dash.in #trend .pts circle:nth-child(4){transition-delay:1.3s}.dash.in #trend .pts circle:nth-child(5){transition-delay:1.6s}
-.dch-l{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font-family:var(--mono);font-size:10.5px}
-.dch-l span{color:var(--c);display:flex;align-items:center;gap:5px}
-.dch-l span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c)}
+#trend{width:100%;height:auto;aspect-ratio:400/130;overflow:visible;display:block}
+#trend .ln{fill:none;stroke:url(#tl);stroke-width:2.5;stroke-linecap:round}
+#trend .ar{fill:url(#tg);opacity:0;transition:opacity 1s .8s}
+#trend .pt{cursor:pointer;opacity:0;transition:opacity .4s,r .2s}
+#trend .pt.e{fill:#0f1116;stroke-width:2}
+#trend .pt:hover,#trend .pt.on{r:6}
+#trend .grid line{stroke:rgba(255,255,255,.05)}
+.dash.in #trend .ar{opacity:1}.dash.in #trend .pt{opacity:1}
+.lgd{display:flex;align-items:center;gap:6px}
+.lgd i{width:7px;height:7px;border-radius:50%;display:inline-block;margin-left:6px}
+.lgd i.w{background:#ff4d00}.lgd i.e{border:1.5px solid #0ea5e9}
+.dch-x{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:#6b7280;margin-top:6px;padding:0 2px}
+.dch-t{font-family:var(--mono);font-size:11.5px;color:#cfd3db;margin-top:10px;min-height:1.4em}
+.dch-t b{color:var(--tcol,#ff6b2c);font-weight:700;margin-right:6px}
 .dfoot{padding:10px 16px;border-top:1px solid rgba(255,255,255,.07);font-family:var(--mono);font-size:11px;color:#6b7280}
 .marquee{margin-top:70px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .mtrack{display:flex;gap:8px;width:max-content;animation:marq 45s linear infinite}
@@ -384,7 +395,7 @@ footer a{color:var(--ink)}
 
 <header id="hdr">
   <div class="wrap hbar">
-    <a class="logo" href="#intro" data-go aria-label="Shashank Reddy Yarva, home">SRY<i>.</i><b></b></a>
+    <a class="logo" href="#intro" data-go aria-label="Shashank Reddy Yarva, home"><span class="gx" data-text="SRY">SRY</span><i>.</i><b></b></a>
     <nav class="main" id="mainnav" aria-label="Main"></nav>
     <div class="hright">
       <button class="iconbtn theme" id="theme" aria-label="Toggle light mode">
@@ -407,7 +418,7 @@ footer a{color:var(--ink)}
     <div class="hero">
       <div>
         <div class="hi rv"><span class="pulse"></span>hi, i'm</div>
-        <h1 class="rv nm" style="--d:.06s" aria-label="Shashank Reddy Yarva"><span class="ini">S</span>hashank <span class="ini">R</span>eddy <span class="ini">Y</span>arva</h1>
+        <h1 class="rv nm" style="--d:.06s" aria-label="Shashank Reddy Yarva"><span class="nl"><span class="ini">S</span>hashank</span><span class="nl"><span class="ini">R</span>eddy</span><span class="nl"><span class="ini">Y</span>arva</span></h1>
         <div class="typed rv" style="--d:.14s">I build <b id="typed" class="glitch" data-text="data pipelines">data pipelines</b></div>
         <p class="about rv" style="--d:.22s"><b>Data analyst.</b> I've spent 5+ years turning messy data into pipelines, dashboards and reports that people actually use. These days I do it for the <b>State of Florida</b>.</p>
         <p class="about rv" style="--d:.28s">I grew up in India, did my Master's at UT Dallas and ended up in Florida. I'm big on clean SQL and automating anything I've done twice, and I let Claude Code handle the boring bits.</p>
@@ -424,23 +435,16 @@ footer a{color:var(--ink)}
           <div><b>Shashank Reddy Yarva</b><span>Sr Data Analyst · FloridaCommerce</span><span class="loc">Florida, USA · from India</span></div>
         </div>
         <div class="dchart">
-          <div class="dch-h"><span>career.trend()</span><span>2019 → now</span></div>
-          <svg viewBox="0 0 400 130" preserveAspectRatio="none" id="trend" aria-label="Career trend chart from 2019 to now">
-            <defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff6b2c" stop-opacity=".35"/><stop offset="1" stop-color="#ff6b2c" stop-opacity="0"/></linearGradient>
-            <linearGradient id="tl" x1="0" x2="1"><stop offset="0" stop-color="#f472b6"/><stop offset=".5" stop-color="#ff6b2c"/><stop offset="1" stop-color="#facc15"/></linearGradient></defs>
-            <g stroke="rgba(255,255,255,.06)"><path d="M0 32H400M0 64H400M0 96H400"/></g>
-            <path class="ar" d="M10 104 L105 104 L170 104 L190 76 L215 56 L262 30 L390 14 L390 125 L10 125Z" fill="url(#tg)"/>
-            <path class="ln" d="M10 104 L105 104 L170 104 L190 76 L215 56 L262 30 L390 14" fill="none" stroke="url(#tl)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-            <path d="M105 104 L170 104" stroke="#0e1014" stroke-width="3" stroke-dasharray="4 5"/>
-            <g class="pts"><circle cx="10" cy="104" r="5" fill="#f472b6"/><circle cx="190" cy="76" r="5" fill="#22d3ee"/><circle cx="215" cy="56" r="5" fill="#60a5fa"/><circle cx="262" cy="30" r="5" fill="#ff6b2c"/><circle cx="390" cy="14" r="5" fill="#facc15"/></g>
-          </svg>
-          <div class="dch-l"><span style="--c:#f472b6">'19 temple of arts</span><span style="--c:#9aa1ae">'21 m.s.</span><span style="--c:#22d3ee">'23 hollerith</span><span style="--c:#60a5fa">'23 datics</span><span style="--c:#ff6b2c">'24 floridacommerce</span></div>
+          <div class="dch-h"><span>career.trend()</span><span class="lgd"><i class="w"></i>work <i class="e"></i>education</span></div>
+          <svg viewBox="0 0 400 130" id="trend" aria-label="Career trend from 2017 to now, covering education and work"></svg>
+          <div class="dch-x"><span>'17</span><span>'19</span><span>'21</span><span>'23</span><span>'25</span><span>now</span></div>
+          <div class="dch-t" id="trendTip"><b>'24</b> Sr Data Analyst · FloridaCommerce</div>
         </div>
         <div class="metrics">
-          <div class="metric" style="--c:#ff8a4c"><b data-count="5" data-suf="+">0</b><span>years with data</span></div>
-          <div class="metric" style="--c:#22d3ee"><b data-count="4">0</b><span>public dashboards</span></div>
-          <div class="metric" style="--c:#a3e635"><b data-count="9">0</b><span>quarters of federal reports</span></div>
-          <div class="metric" style="--c:#f472b6"><b data-count="4" data-suf="+">0</b><span>reports a month</span></div>
+          <div class="metric" style="--c:#ff5a1f"><b class="gx" data-count="5" data-suf="+">0</b><span>years with data</span></div>
+          <div class="metric" style="--c:#06b6d4"><b class="gx" data-count="4">0</b><span>public dashboards</span></div>
+          <div class="metric" style="--c:#84cc16"><b class="gx" data-count="9">0</b><span>quarters of federal reports</span></div>
+          <div class="metric" style="--c:#ec4899"><b class="gx" data-count="4" data-suf="+">0</b><span>reports a month</span></div>
         </div>
         <div class="dfoot">source: résumé, linkedin, mild self-belief</div>
       </div>
@@ -487,7 +491,7 @@ footer a{color:var(--ink)}
 <section id="skills" class="sec" style="--c:var(--violet)">
   <div class="wrap">
     <div class="kicker rv"><b>02</b>// skills</div>
-    <h2 class="title rv" style="--d:.06s">Skills and <em>tools</em></h2>
+    <h2 class="title rv" style="--d:.06s">Skills and <em class="gx" data-text="tools">tools</em></h2>
     <div class="query rv" style="--d:.1s"><span><span class="k">SELECT</span> tool <span class="k">FROM</span> stack <span class="k">WHERE</span> used_this_year = <span class="s">TRUE</span>;</span></div>
     <div class="skgrid" id="skgrid"></div>
   </div>
@@ -497,7 +501,7 @@ footer a{color:var(--ink)}
 <section id="work" class="sec" style="--c:var(--orange)">
   <div class="wrap">
     <div class="kicker rv"><b>03</b>// experience</div>
-    <h2 class="title rv" style="--d:.06s">Where I've <em>worked</em></h2>
+    <h2 class="title rv" style="--d:.06s">Where I've <em class="gx" data-text="worked">worked</em></h2>
     <p class="lead rv" style="--d:.1s">5+ years across state government, a data consultancy, an internship and an education business. Pick a role to jump to it.</p>
     <div class="wtabs rv" style="--d:.14s" id="wtabs"></div>
 
@@ -510,11 +514,11 @@ footer a{color:var(--ink)}
         <p class="summary">I'm the analyst behind Florida's <b>federal workforce reporting</b> to the U.S. Department of Labor and the state's <b>public performance dashboards</b>. The work spans seven programmes: WIOA, Wagner-Peyser, TAA, RESEA, SNAP E&amp;T, Welfare Transition and ETPL. I own it end to end, from writing the SQL and validating the data to building the dashboards, automating the monthly reports and getting every submission in on time.</p>
         <div class="ribbon"><span class="medal">★</span>Employee of the Month · June 2026</div>
         <div class="jstats">
-          <div class="jstat"><b data-count="4">0</b><span>public-facing Tableau dashboards</span></div>
-          <div class="jstat"><b data-count="9">0</b><span>quarters of federal reports, on schedule</span></div>
-          <div class="jstat"><b data-count="4" data-suf="+">0</b><span>recurring reports every month</span></div>
-          <div class="jstat"><b data-count="7">0</b><span>federal programmes covered</span></div>
-          <div class="jstat"><b data-count="23">0</b><span>annual FETPIP files produced</span></div>
+          <div class="jstat"><b class="gx" data-count="4">0</b><span>public-facing Tableau dashboards</span></div>
+          <div class="jstat"><b class="gx" data-count="9">0</b><span>quarters of federal reports, on schedule</span></div>
+          <div class="jstat"><b class="gx" data-count="4" data-suf="+">0</b><span>recurring reports every month</span></div>
+          <div class="jstat"><b class="gx" data-count="7">0</b><span>federal programmes covered</span></div>
+          <div class="jstat"><b class="gx" data-count="23">0</b><span>annual FETPIP files produced</span></div>
         </div>
         <div class="groups">
           <div class="grp" style="--gc:var(--orange)"><h4><i>01</i>Federal reporting and compliance</h4><ul>
@@ -563,9 +567,9 @@ footer a{color:var(--ink)}
       <div class="jobbody">
         <p class="summary">I built and ran the pipelines behind <b>executive dashboards, KPI tracking and predictive analytics</b>. That meant moving data from operational databases and third-party APIs into a <b>Snowflake</b> warehouse, and making sure it arrived clean, on time and secure.</p>
         <div class="jstats">
-          <div class="jstat"><b>ETL + ELT</b><span>pipeline patterns built and maintained</span></div>
-          <div class="jstat"><b data-count="3" data-suf="+">0</b><span>source system types into Snowflake</span></div>
-          <div class="jstat"><b>dev → prod</b><span>multi-environment deployments</span></div>
+          <div class="jstat"><b class="gx">ETL + ELT</b><span>pipeline patterns built and maintained</span></div>
+          <div class="jstat"><b class="gx" data-count="3" data-suf="+">0</b><span>source system types into Snowflake</span></div>
+          <div class="jstat"><b class="gx">dev → prod</b><span>multi-environment deployments</span></div>
         </div>
         <div class="groups">
           <div class="grp" style="--gc:var(--blue)"><h4><i>01</i>Pipelines and orchestration</h4><ul>
@@ -658,7 +662,7 @@ footer a{color:var(--ink)}
 <section id="education" class="sec" style="--c:var(--blue)">
   <div class="wrap">
     <div class="kicker rv"><b>04</b>// education</div>
-    <h2 class="title rv" style="--d:.06s">Where I <em>studied</em></h2>
+    <h2 class="title rv" style="--d:.06s">Where I <em class="gx" data-text="studied">studied</em></h2>
     <div class="edu">
       <div class="ecard rv" id="utd" style="--c:var(--orange)">
         <div class="ehead"><div class="logo-tile"><img data-logo="utd" alt="UT Dallas logo"></div><div><div class="deg">MASTER OF SCIENCE</div><h3>Information Technology and Management</h3></div></div>
@@ -698,7 +702,7 @@ footer a{color:var(--ink)}
 <section id="projects" class="sec" style="--c:var(--lime)">
   <div class="wrap">
     <div class="kicker rv"><b>05</b>// projects</div>
-    <h2 class="title rv" style="--d:.06s">Things I've <em>built</em></h2>
+    <h2 class="title rv" style="--d:.06s">Things I've <em class="gx" data-text="built">built</em></h2>
     <p class="lead rv" style="--d:.1s">Side projects, built on my own time for real people.</p>
     <div class="pgrid">
       <article class="pcard main rv" id="p-lfxct" style="--c:var(--lime)">
@@ -730,7 +734,7 @@ footer a{color:var(--ink)}
 <section id="offhours" class="sec" style="--c:var(--pink)">
   <div class="wrap">
     <div class="kicker rv"><b>06</b>// off hours</div>
-    <h2 class="title rv" style="--d:.06s">When I'm <em>offline</em></h2>
+    <h2 class="title rv" style="--d:.06s">When I'm <em class="gx" data-text="offline">offline</em></h2>
     <p class="lead rv" style="--d:.1s">Mostly sport, some cooking, a lot of mythology and too much PlayStation. Sample size: every weekend.</p>
     <div class="hgrid" id="hgrid"></div>
   </div>
@@ -741,7 +745,7 @@ footer a{color:var(--ink)}
   <div class="wrap">
     <div class="cbox rv">
       <div class="kicker"><b style="color:var(--orange)">07</b>// contact</div>
-      <h2 style="margin-top:14px">Let's <em>talk</em>.</h2>
+      <h2 style="margin-top:14px">Let's <em class="gx" data-text="talk">talk</em>.</h2>
       <p>Whether it's a <b>role</b>, a <b>project</b> or some friendly banter about <b>McLaren</b> or <b>Man City</b>, my inbox is open. I reply faster than a McLaren pit stop. Usually.</p>
       <div class="cbtns">
         <button class="btn pri" id="copy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>shashank.work00@gmail.com <small id="copyLbl">copy</small></button>
@@ -852,20 +856,48 @@ const markNav=()=>{const y=scrollY+innerHeight*.35;let cur="intro";["intro","abo
 addEventListener("scroll",markNav,{passive:true});markNav();
 
 /* reveal + counters */
-const count=el=>{if(el.dataset.done)return;el.dataset.done=1;const to=+el.dataset.count,suf=el.dataset.suf||"",t0=performance.now();
-  const st=t=>{const k=Math.min(1,(t-t0)/1100);el.textContent=Math.round(to*(1-Math.pow(1-k,3)))+suf;if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)};
+const glitch=el=>{if(!el)return;el.dataset.text=el.textContent;el.classList.remove("go");void el.offsetWidth;el.classList.add("go")};
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const count=el=>{if(el.dataset.done)return;el.dataset.done=1;const to=el.dataset.count,suf=el.dataset.suf||"",fin=to+suf;
+  if(RM){el.textContent=fin;return}
+  let n=0;const iv=setInterval(()=>{n++;el.textContent=[...to].map(()=>Math.floor(Math.random()*10)).join("")+suf;if(n%3===1)glitch(el);
+    if(n>=14){clearInterval(iv);el.textContent=fin;glitch(el)}},55)};
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("in");e.target.querySelectorAll("[data-count]").forEach(count);
-io.unobserve(e.target)}),{threshold:.12,rootMargin:"0px 0px -30px 0px"});
+  e.target.querySelectorAll(".gx:not([data-count])").forEach(g=>setTimeout(()=>glitch(g),350));if(e.target.matches(".gx"))setTimeout(()=>glitch(e.target),350);io.unobserve(e.target)}),{threshold:.12,rootMargin:"0px 0px -30px 0px"});
+document.addEventListener("pointerover",e=>{const g=e.target.closest&&e.target.closest(".gx");if(g&&!g.classList.contains("go-h")){g.classList.add("go-h");glitch(g);setTimeout(()=>g.classList.remove("go-h"),500)}});
+if(!RM)setInterval(()=>{const vis=$$(".gx").filter(g=>{const r=g.getBoundingClientRect();return r.top>0&&r.bottom<innerHeight});if(vis.length)glitch(vis[Math.floor(Math.random()*vis.length)])},3200);
 $$(".rv").forEach(el=>io.observe(el));
 
 /* typed glitch */
 const roles=["data pipelines","public dashboards","federal reports","automations","AI-powered workflows","clean SQL","Tableau dashboards","ETL that doesn't break"];
-const dark=["#ff6b2c","#22d3ee","#a3e635","#f472b6","#a78bfa","#facc15","#60a5fa","#4ade80"],light=["#ea580c","#0891b2","#4d7c0f","#db2777","#7c3aed","#b45309","#2563eb","#16a34a"];
+const dark=["#ff5a1f","#06b6d4","#84cc16","#ec4899","#8b5cf6","#eab308","#3b82f6","#22c55e"],light=["#ea580c","#0891b2","#4d7c0f","#db2777","#7c3aed","#b45309","#2563eb","#16a34a"];
 let ri=0;const tEl=$("#typed");
 const applyTc=()=>tEl.style.setProperty("--wc",(root.dataset.theme==="light"?light:dark)[ri]);applyTc();
 const swap=()=>{tEl.classList.remove("go");void tEl.offsetWidth;tEl.classList.add("go");
   setTimeout(()=>{ri=(ri+1)%roles.length;tEl.textContent=roles[ri];tEl.dataset.text=roles[ri];applyTc()},130)};
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches)setInterval(swap,1500);else setInterval(()=>{ri=(ri+1)%roles.length;tEl.textContent=roles[ri];applyTc()},2500);
+
+
+/* career trend */
+(()=>{const svg=document.getElementById("trend");if(!svg)return;const NS="http://www.w3.org/2000/svg";
+const P=[[2017.6,30,"e","'17","Started B.Tech in ECE, India"],[2019.7,52,"w","'19","Business Data Analyst · Temple of Arts"],[2021.4,38,"e","'21","B.Tech done, moved to the US for the M.S."],
+ [2022.5,58,"e","'22","Deep in databases, big data and cloud at UT Dallas"],[2023.1,48,"w","'23","Data Engineer Intern · Hollerith"],[2023.4,66,"e","'23","Graduated · M.S. ITM, UT Dallas"],
+ [2023.8,62,"w","'23","Data Engineer · Datics Inc"],[2024.8,80,"w","'24","Sr Data Analyst · FloridaCommerce"],[2025.6,74,"w","'25","Federal reporting, dashboards and automation"],[2026.8,92,"w","now","Still shipping. Trend: up and to the right"]];
+const X=y=>8+(y-2017.5)/(2026.9-2017.5)*384,Y=v=>122-v*1.12;
+const pts=P.map(p=>[X(p[0]),Y(p[1])]);
+let d=`M${pts[0][0]},${pts[0][1]}`;for(let i=0;i<pts.length-1;i++){const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+  d+=` C${p1[0]+(p2[0]-p0[0])/6},${p1[1]+(p2[1]-p0[1])/6} ${p2[0]-(p3[0]-p1[0])/6},${p2[1]-(p3[1]-p1[1])/6} ${p2[0]},${p2[1]}`}
+svg.innerHTML=`<defs><linearGradient id="tg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff4d00" stop-opacity=".22"/><stop offset="1" stop-color="#ff6b2c" stop-opacity="0"/></linearGradient><linearGradient id="tl" x1="0" x2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset=".5" stop-color="#ff1f6b"/><stop offset="1" stop-color="#ff4d00"/></linearGradient></defs>
+<g class="grid"><line x1="0" x2="400" y1="32" y2="32"/><line x1="0" x2="400" y1="70" y2="70"/><line x1="0" x2="400" y1="108" y2="108"/></g>
+<path class="ar" d="${d} L${pts[pts.length-1][0]},126 L${pts[0][0]},126Z"/><path class="ln" d="${d}"/>`;
+const ln=svg.querySelector(".ln"),L=ln.getTotalLength();ln.style.strokeDasharray=L;ln.style.strokeDashoffset=L;ln.style.transition="stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1) .3s";
+const tip=document.getElementById("trendTip");let pinned=P.length-3;
+const show=i=>{const p=P[i];tip.innerHTML=`<b>${p[3]}</b>${p[4]}`;tip.style.setProperty("--tcol",p[2]==="e"?"#0ea5e9":"#ff4d00");svg.querySelectorAll(".pt").forEach((c,k)=>c.classList.toggle("on",k===i))};
+P.forEach((p,i)=>{const c=document.createElementNS(NS,"circle");c.setAttribute("cx",pts[i][0]);c.setAttribute("cy",pts[i][1]);c.setAttribute("r",4);c.setAttribute("class","pt "+p[2]);
+  if(p[2]==="e")c.setAttribute("stroke","#0ea5e9");else c.setAttribute("fill","#ff4d00");c.style.transitionDelay=(.3+i*.15)+"s";
+  c.addEventListener("pointerenter",()=>show(i));c.addEventListener("click",()=>{pinned=i;show(i)});svg.appendChild(c)});
+svg.addEventListener("pointerleave",()=>show(pinned));show(pinned);
+const ob=new IntersectionObserver(es=>{if(es[0].isIntersecting){ln.style.strokeDashoffset=0;ob.disconnect()}},{threshold:.2});ob.observe(svg);})();
 
 /* copy */
 $("#copy").onclick=async()=>{const l=$("#copyLbl");try{await navigator.clipboard.writeText("shashank.work00@gmail.com");l.textContent="copied ✓"}catch(e){l.textContent="select it"}setTimeout(()=>l.textContent="copy",1800)};
